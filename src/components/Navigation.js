@@ -43,7 +43,10 @@ const Navigation = () => {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success" className="btn-danger">
+            <Button
+              variant="outline-success"
+              className="btn-primary text-white"
+            >
               Search
             </Button>
           </Form>
