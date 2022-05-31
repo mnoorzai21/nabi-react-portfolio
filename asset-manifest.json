@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/nabi-react-portfolio/static/css/main.e6c13ad2.css",
-    "main.js": "/nabi-react-portfolio/static/js/main.2350dce2.js",
+    "main.css": "/nabi-react-portfolio/static/css/main.ef4ca1c4.css",
+    "main.js": "/nabi-react-portfolio/static/js/main.88e9e793.js",
     "index.html": "/nabi-react-portfolio/index.html",
-    "main.e6c13ad2.css.map": "/nabi-react-portfolio/static/css/main.e6c13ad2.css.map",
-    "main.2350dce2.js.map": "/nabi-react-portfolio/static/js/main.2350dce2.js.map"
+    "main.ef4ca1c4.css.map": "/nabi-react-portfolio/static/css/main.ef4ca1c4.css.map",
+    "main.88e9e793.js.map": "/nabi-react-portfolio/static/js/main.88e9e793.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.2350dce2.js"
+    "static/css/main.ef4ca1c4.css",
+    "static/js/main.88e9e793.js"
   ]
 }
