@@ -9,11 +9,11 @@ import "../styles/Portfolio.css";
 
 export default function Home() {
   // Declare a new state variable, which we'll call "count"
-  const [currentPage, setCurrentPage] = useState("About Me");
+  const [currentPage, setCurrentPage] = useState("AboutMe");
 
   const renderPage = () => {
     switch (currentPage) {
-      case "About Me":
+      case "AboutMe":
         return <AboutMe />;
       case "Projects":
         return <Projects />;

@@ -1,59 +1,51 @@
-import {
-  Nav,
-  Navbar,
-  Container,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-} from "react-bootstrap";
+import React from "react";
+import { Navbar, Nav, Container } from "react-bootstrap";
 
-const Navigation = () => {
+export default function Navigation(props) {
   return (
-    <Navbar bg="light" expand="lg">
-      <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px" }}
-            navbarScroll
-          >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
+    <Navbar collapseOnSelect expand="sm" className="row p-3 ">
+      <Container>
+        <Navbar.Brand href="#home">
+          <h2>Mohammad Nabi Noorzai</h2>
+        </Navbar.Brand>
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          id="custom-nav-button"
+        />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto"></Nav>
+          <Nav>
+            <Nav.Link
+              href="#aboutme"
+              className="text-dark custom-nav"
+              onClick={() => props.handlePageChange("AboutMe")}
+            >
+              About Me
+            </Nav.Link>
+            <Nav.Link
+              href="#projects"
+              className="text-dark custom-nav"
+              onClick={() => props.handlePageChange("Projects")}
+            >
+              Projects
+            </Nav.Link>
+            <Nav.Link
+              href="#contact"
+              className="text-dark custom-nav"
+              onClick={() => props.handlePageChange("Contacts")}
+            >
+              Contact
+            </Nav.Link>
+            <Nav.Link
+              href="#resume"
+              className="text-dark custom-nav"
+              onClick={() => props.handlePageChange("Resume")}
+            >
+              Resume
             </Nav.Link>
           </Nav>
-          <Form className="d-flex">
-            <FormControl
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button
-              variant="outline-success"
-              className="btn-primary text-white"
-            >
-              Search
-            </Button>
-          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
-};
-
-export default Navigation;
+}

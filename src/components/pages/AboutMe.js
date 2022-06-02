@@ -5,7 +5,7 @@ export default function AboutMe() {
   return (
     <div className="container container-fluid d-flex flex-row flex-wrap justify-content-center">
       <div className="text-center col-3 ">
-        <h1>About</h1>
+        <h1>About Me</h1>
         <img
           src={myPhoto}
           className="img-fluid my-photo rounded-circle"
