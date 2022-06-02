@@ -20,4 +20,11 @@ const myPorjects = {
     github: "https://github.com/mnoorzai21/password-generator-mnn",
   },
 };
-export default myPorjects;
+
+const function  Portfolio (){
+    return (
+
+    )
+}
+
+export default Portfolio;
