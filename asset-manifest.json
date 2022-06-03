@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/nabi-react-portfolio/static/css/main.6058ecc9.css",
-    "main.js": "/nabi-react-portfolio/static/js/main.3c8db54c.js",
+    "main.js": "/nabi-react-portfolio/static/js/main.4735a31d.js",
+    "static/media/myphoto.jpg": "/nabi-react-portfolio/static/media/myphoto.6a8cd91558c2a0b8843e.jpg",
+    "static/media/MohammadNabiNoorzai_Resume.pdf": "/nabi-react-portfolio/static/media/MohammadNabiNoorzai_Resume.029516d058aebdad9d77.pdf",
     "index.html": "/nabi-react-portfolio/index.html",
     "main.6058ecc9.css.map": "/nabi-react-portfolio/static/css/main.6058ecc9.css.map",
-    "main.3c8db54c.js.map": "/nabi-react-portfolio/static/js/main.3c8db54c.js.map"
+    "main.4735a31d.js.map": "/nabi-react-portfolio/static/js/main.4735a31d.js.map"
   },
   "entrypoints": [
     "static/css/main.6058ecc9.css",
-    "static/js/main.3c8db54c.js"
+    "static/js/main.4735a31d.js"
   ]
 }
