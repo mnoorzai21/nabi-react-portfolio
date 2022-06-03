@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Portfolio";
-// import Contacts from "./pages/Contacts";
-// import Resume from "./pages/Resume";
+import Contact from "./pages/Contact";
+import Resume from "./pages/Resume";
 import Navigation from "./Navigation";
-// import Footer from "./Footer";
-import "../styles/Portfolio.css";
+import Footer from "./Footer";
 
 export default function Home() {
   // Declare a new state variable, which we'll call "count"
@@ -17,10 +16,10 @@ export default function Home() {
         return <AboutMe />;
       case "Projects":
         return <Projects />;
-      // case "Contacts":
-      //   return <Contacts />;
-      // case "Resume":
-      //   return <Resume />;
+      case "Contact":
+        return <Contact />;
+      case "Resume":
+        return <Resume />;
       default:
         return <AboutMe />;
     }
@@ -33,7 +32,7 @@ export default function Home() {
         handlePageChange={(page) => setCurrentPage(page)}
       />
       {renderPage()}
-      {/* <Footer/> */}
+      <Footer />
     </div>
   );
 }

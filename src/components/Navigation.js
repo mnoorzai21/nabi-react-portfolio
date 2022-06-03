@@ -32,7 +32,7 @@ export default function Navigation(props) {
             <Nav.Link
               href="#contact"
               className="text-dark custom-nav"
-              onClick={() => props.handlePageChange("Contacts")}
+              onClick={() => props.handlePageChange("Contact")}
             >
               Contact
             </Nav.Link>
