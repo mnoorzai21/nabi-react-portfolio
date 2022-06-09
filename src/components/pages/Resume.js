@@ -2,7 +2,7 @@ import myResume from "../../images/MohammadNabiNoorzai_Resume.pdf";
 
 export default function Resume() {
   return (
-    <div className="text-center m-3 ">
+    <div className="text-center text-light m-6 ">
       <div className="card-header ">
         <h2>Resume</h2>
       </div>
