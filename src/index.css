@@ -30,7 +30,7 @@ code {
   opacity: 0;
 }
 .custom-card-info:hover {
-  color: rgb(43, 19, 19);
+  color: white;
   background-color: rgb(83, 103, 140);
   transition: 0.7s;
   opacity: 0.9;
