@@ -42,7 +42,7 @@ const myPorjects = [
 
 export default function Portfolio() {
   return (
-    <div className="container-fluid d-flex flex-row flex-wrap justify-content-center">
+    <div className="container-fluid d-flex text-light flex-row flex-wrap justify-content-center">
       {myPorjects.map((project) => {
         return (
           <div
