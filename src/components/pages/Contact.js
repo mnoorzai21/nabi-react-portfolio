@@ -35,7 +35,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="row col-12 justify-content-center">
+    <section className="row col-9 justify-content-left">
       <div className="col-12 col-md-6 col-lg-6">
         <form className="p-3 rounded" onSubmit={handleFormSubmit}>
           <h2>Contact</h2>

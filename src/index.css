@@ -5,10 +5,51 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: aliceblue;
   background-color:blanchedalmond;
+  background-image: url("../src/images/background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.custom-card {
+  width: 25rem;
+}
+
+.custom-img {
+  opacity: 0.8;
+}
+.custom-card-info {
+  opacity: 0;
+}
+.custom-card-info:hover {
+  color: rgb(43, 19, 19);
+  background-color: rgb(83, 103, 140);
+  transition: 0.7s;
+  opacity: 0.9;
+}
+
+.my-photo{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.myphotoContainer{
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+
