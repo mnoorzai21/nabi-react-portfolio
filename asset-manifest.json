@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/nabi-react-portfolio/static/css/main.42c31ff9.css",
-    "main.js": "/nabi-react-portfolio/static/js/main.bfed79bc.js",
+    "main.js": "/nabi-react-portfolio/static/js/main.6d762948.js",
     "static/media/project-2.jpeg": "/nabi-react-portfolio/static/media/project-2.cb2c4efa50a2e8151e76.jpeg",
     "static/media/project-1.png": "/nabi-react-portfolio/static/media/project-1.624f4b103f414088c11b.png",
     "static/media/weather-dashboard.png": "/nabi-react-portfolio/static/media/weather-dashboard.c7ddd18ce54d3e412061.png",
@@ -11,10 +11,10 @@
     "static/media/password-generator.png": "/nabi-react-portfolio/static/media/password-generator.5c2a23df0c56c79b37d2.png",
     "index.html": "/nabi-react-portfolio/index.html",
     "main.42c31ff9.css.map": "/nabi-react-portfolio/static/css/main.42c31ff9.css.map",
-    "main.bfed79bc.js.map": "/nabi-react-portfolio/static/js/main.bfed79bc.js.map"
+    "main.6d762948.js.map": "/nabi-react-portfolio/static/js/main.6d762948.js.map"
   },
   "entrypoints": [
     "static/css/main.42c31ff9.css",
-    "static/js/main.bfed79bc.js"
+    "static/js/main.6d762948.js"
   ]
 }
