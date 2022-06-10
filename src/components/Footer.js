@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -19,6 +19,13 @@ export default function Footer() {
             role="button"
           >
             <FaGithub />
+          </a>
+          <a
+            className="btn btn-dark btn-floating m-1"
+            href="https://twitter.com/home"
+            role="button"
+          >
+            <FaTwitter />
           </a>
         </section>
       </div>
