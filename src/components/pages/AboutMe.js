@@ -16,7 +16,7 @@ export default function AboutMe() {
         San Diego Mesa College and a certificate in development from the
         University of California, San Diego. Know for problem-solving, learning
         quickly, and a strong ability to work in stressful situations.
-        Passionate to develop real-world projects from conception. and Java
+        Passionate to develop real-world projects from conception.
       </p>
     </div>
   );
