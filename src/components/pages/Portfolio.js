@@ -4,13 +4,16 @@ import passwordGeneratorImage from "../../images/password-generator.png";
 import golfapedia from "../../images/project-1.png";
 import gitFit from "../../images/project-2.jpeg";
 import weatherDashboard from "../../images/weather-dashboard.png";
+import bookSearchjet from "../../images/bookSearch-screenshot.png";
+import monitorList from "../../images/monitorList-screenshot.png";
 
 const myPorjects = [
   {
     id: 1,
     title: "Git-Fit",
     image: `${gitFit}`,
-    details: "Fitness app, that generates a workout with exercises/set/reps",
+    details:
+      "Fitness App, that generates a workout session with exercises/set/reps",
     deployedLink: "https://peaceful-dusk-53929.herokuapp.com/",
     github: "https://github.com/ShawnArgent/Git-Fit",
   },
@@ -18,23 +21,41 @@ const myPorjects = [
     id: 2,
     title: "Golfapedia",
     image: `${golfapedia}`,
-    details: "Golfing app, that finds nearby golf courses",
+    details: "Golfing App, that finds nearby golf courses",
     deployedLink: "https://nirav-v.github.io/golfapedia/",
     github: "https://github.com/nirav-v/golfapedia",
   },
   {
     id: 3,
-    title: "weather-dashboard",
-    image: `${weatherDashboard}`,
-    details: "Weather Dashboard app, shows weather forcast for a searched city",
-    deployedLink: "https://mnoorzai21.github.io/weather-dashboard-mnn/",
-    github: "https://github.com/mnoorzai21/nabi-portfolio-page-mnn",
+    title: "book-searchjet",
+    image: `${bookSearchjet}`,
+    details:
+      "Book Search App allows a user to sign up, login, save searched book and remove saved book",
+    deployedLink: "https://book-searchjet-mnn.herokuapp.com/",
+    github: "https://github.com/mnoorzai21/book-searchjet-mnn",
   },
   {
     id: 4,
+    title: "monitor-list",
+    image: `${monitorList}`,
+    details:
+      "Monitor List App allows the user to sign up, login, search for favorite Movie, TV-Shows and save it in watchlist",
+    deployedLink: "https://monitor-list.herokuapp.com/",
+    github: "https://github.com/mnoorzai21/monitor-list",
+  },
+  {
+    id: 5,
+    title: "weather-dashboard",
+    image: `${weatherDashboard}`,
+    details: "Weather Dashboard App, shows weather forcast for a searched city",
+    deployedLink: "https://mnoorzai21.github.io/weather-dashboard-mnn/",
+    github: "https://github.com/mnoorzai21/weather-dashboard-mnn",
+  },
+  {
+    id: 6,
     title: "password-generator",
     image: `${passwordGeneratorImage}`,
-    details: "Passwork generator app, generates a random password",
+    details: "Password Generator App, generates a random password",
     deployedLink: "https://mnoorzai21.github.io/password-generator-mnn/",
     github: "https://github.com/mnoorzai21/password-generator-mnn",
   },
