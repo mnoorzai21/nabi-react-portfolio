@@ -35,7 +35,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="row text-light col-9 justify-content-left">
+    <section className="row text-light -align-center col-9 justify-content-left">
       <div className="col-12 col-md-6 col-lg-6">
         <form className="p-3 rounded" onSubmit={handleFormSubmit}>
           <h2>Contact</h2>
@@ -85,6 +85,10 @@ export default function Contact() {
             Submit
           </button>
         </form>
+      </div>
+      <div id="email-link">
+        Email me at:{" "}
+        <a href="mailto: mnoorzai21@gmail.com">mnoorzai21@gmail.com</a>
       </div>
     </section>
   );
