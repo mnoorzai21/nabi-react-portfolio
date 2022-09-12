@@ -40,7 +40,7 @@ const myPorjects = [
     title: "monitor-list",
     image: `${monitorList}`,
     details:
-      "Used JavaScript, React, GraphQL, Mongoose, Node.js, Express.js, Google Books APIs, and Heroku",
+      "With this app the user can sign-up, login, search for favorite movies, and TV shows. User can save their favorite movies and TV shows to their watchlist by simply clicking on the save button. User can also see their saved items in the watchlist and can remove and marked items as watched from the watchlist. Used JavaScript, React, GraphQL, Mongoose, Node.js, Express.js, Google Books APIs, and Heroku",
     deployedLink: "https://monitor-list.herokuapp.com/",
     github: "https://github.com/mnoorzai21/monitor-list",
   },
