@@ -88,7 +88,7 @@ export default function Contact() {
       </div>
       <div id="email-link">
         Email me at:{" "}
-        <a href="mailto: mnoorzai21@gmail.com">mnoorzai21@gmail.com</a>
+        <a href="mailto: @gmail.com">gmail.com</a>
       </div>
     </section>
   );

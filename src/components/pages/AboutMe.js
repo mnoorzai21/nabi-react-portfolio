@@ -1,8 +1,9 @@
 import React from "react";
 import "../../index.css";
-import myPhoto from "../../images/myphoto.jpg";
+import myPhoto from "../../images/nabi.jpg";
 
 export default function AboutMe() {
+ 
   return (
     <div className="container container-fluid text-light flex-row flex-wrap justify-content-center">
       <div className="text-center col-3 ">

@@ -1,4 +1,4 @@
-import myResume from "../../images/MohammadNabiNoorzaiResume.pdf";
+import myResume from "../../images/Resume.pdf";
 
 export default function Resume() {
   return (
