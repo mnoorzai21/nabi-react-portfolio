@@ -8,7 +8,11 @@ export default function AboutMe() {
       <div className="text-center col-3 ">
         <h1>About Me</h1>
         <div className="myphotoContainer">
-          <img src={myPhoto} className="my-photo " alt="MyPhoto" />
+          <img
+            src={myPhoto}
+            className="my-photo justify-content-center"
+            alt="MyPhoto"
+          />
         </div>
       </div>
       <p className="load about-me p-4">
