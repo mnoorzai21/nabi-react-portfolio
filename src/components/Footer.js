@@ -15,7 +15,7 @@ export default function Footer() {
           </a>
           <a
             className="btn btn-dark btn-floating m-1"
-            href="https://twitter.com/home"
+            href="https://github.com/mnoorzai21"
             role="button"
           >
             <FaGithub />
