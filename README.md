@@ -2,7 +2,7 @@
 
 ## Description
 
-This is Mohammad Nabi Noorzai's react protfolio.
+This is Mohammad Nabi Noorzai's react portfolio.
 
 ## Table of Contents
 
