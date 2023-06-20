@@ -1,6 +1,6 @@
 import React from "react";
 import "../../index.css";
-import myPhoto from "../../images/nabi.jpg";
+import myPhoto from "../../images/myphoto.jpg";
 
 export default function AboutMe() {
   return (
