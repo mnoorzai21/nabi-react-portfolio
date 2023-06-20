@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/nabi-react-portfolio/static/css/main.43062c89.css",
-    "main.js": "/nabi-react-portfolio/static/js/main.76549c93.js",
+    "main.js": "/nabi-react-portfolio/static/js/main.a99aea71.js",
     "static/media/project-2.jpeg": "/nabi-react-portfolio/static/media/project-2.cb2c4efa50a2e8151e76.jpeg",
     "static/media/project-1.png": "/nabi-react-portfolio/static/media/project-1.624f4b103f414088c11b.png",
     "static/media/weather-dashboard.png": "/nabi-react-portfolio/static/media/weather-dashboard.c7ddd18ce54d3e412061.png",
     "static/media/monitorList-screenshot.png": "/nabi-react-portfolio/static/media/monitorList-screenshot.fdd58a97cd1dcb10c7d4.png",
     "static/media/bookSearch-screenshot.png": "/nabi-react-portfolio/static/media/bookSearch-screenshot.00f4678880fc5bc2920b.png",
-    "static/media/nabi.jpg": "/nabi-react-portfolio/static/media/nabi.c8fbd1e7612f79bd968a.jpg",
+    "static/media/myphoto.jpg": "/nabi-react-portfolio/static/media/myphoto.6a8cd91558c2a0b8843e.jpg",
     "static/media/background.png": "/nabi-react-portfolio/static/media/background.c8b051e6f06758ceebe3.png",
     "static/media/Resume.pdf": "/nabi-react-portfolio/static/media/Resume.22d32db0c3cdd9458d4b.pdf",
     "static/media/password-generator.png": "/nabi-react-portfolio/static/media/password-generator.5c2a23df0c56c79b37d2.png",
     "index.html": "/nabi-react-portfolio/index.html",
     "main.43062c89.css.map": "/nabi-react-portfolio/static/css/main.43062c89.css.map",
-    "main.76549c93.js.map": "/nabi-react-portfolio/static/js/main.76549c93.js.map"
+    "main.a99aea71.js.map": "/nabi-react-portfolio/static/js/main.a99aea71.js.map"
   },
   "entrypoints": [
     "static/css/main.43062c89.css",
-    "static/js/main.76549c93.js"
+    "static/js/main.a99aea71.js"
   ]
 }
