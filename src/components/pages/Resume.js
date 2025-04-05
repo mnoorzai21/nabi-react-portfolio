@@ -1,5 +1,5 @@
 import React from "react";
-import myResume from "../../images/Resume.pdf";
+import myResume from "../../images/Nabis_Resume.pdf";
 
 export default function Resume() {
   return (
