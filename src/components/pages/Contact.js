@@ -73,8 +73,7 @@ export default function Contact() {
               rows="3"
               name="message"
               defaultValue={formState.message}
-              onBlur={handleChange}
-            ></textarea>
+              onBlur={handleChange}></textarea>
           </div>
           {errorMessage && (
             <div className="my-1 p-1 bg-warning text-secondary rounded">

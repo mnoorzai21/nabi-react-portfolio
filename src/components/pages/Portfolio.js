@@ -1,3 +1,4 @@
+import React from "react";
 import "../../index.css";
 
 import passwordGeneratorImage from "../../images/password-generator.png";
@@ -71,8 +72,7 @@ export default function Portfolio() {
         return (
           <div
             key={project.id}
-            className="card bg-dark text-white custom-card text-center m-3"
-          >
+            className="card bg-dark text-white custom-card text-center m-3">
             <img
               src={project.image}
               className="card-img custom-img"
@@ -84,15 +84,13 @@ export default function Portfolio() {
               <a
                 className="btn btn-success btn-floating m-1"
                 href={project.deployedLink}
-                role="button"
-              >
+                role="button">
                 deployedLink
               </a>
               <a
                 className="btn btn-dark btn-floating m-1"
                 href={project.github}
-                role="button"
-              >
+                role="button">
                 github
               </a>
             </div>

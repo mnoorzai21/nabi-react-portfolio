@@ -1,3 +1,4 @@
+import React from "react";
 import myResume from "../../images/Resume.pdf";
 
 export default function Resume() {
@@ -9,8 +10,9 @@ export default function Resume() {
       <div className="card-body">
         <h5 className="card-title">Skills</h5>
         <p className="card-text">
-          HTML5, CSS, Bootstrap, JavaScript, jQuery, MySQL, MongoDB, Express,
-          React.js, Node.js, GraphQl
+          JavaScript, Java, C/C++, Python, HTML5, CSS, Bootstrap, jQuery, MySQL,
+          MongoDB, Express, React.js, Node.js, GraphQl, Data Structures,
+          Linux/Unix, Artificially Intelligence, and Machine Learning Learning.
         </p>
         <a href={myResume} download className="btn btn-success mt-3">
           Download My Resume
