@@ -22,14 +22,14 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="src\components\pages\AboutMe.js" component={AboutMe} />
+          <Route path="components\pages\AboutMe.js" component={AboutMe} />
           <Route
-            path="src\components\pages\Portfolio.js"
+            path="components\pages\Portfolio.js"
             component={Projects}
           />
-          <Route path="src\components\pages\Contact.js" component={Contact} />
+          <Route path="components\pages\Contact.js" component={Contact} />
           <Route
-            path="src\components\pages\Resume.js"
+            path="components\pages\Resume.js"
             component={Resume}
           />
         </Switch>
