@@ -8,7 +8,12 @@ export default function Resume() {
         <h2>Resume and Skills</h2>
       </div>
       <div className="card-body">
-        <h4>💻 Technical Skills</h4>
+        <h4>
+          <span role="img" aria-label="laptop">
+            💻
+          </span>
+          Technical Skills
+        </h4>
 
         <p>
           <strong>Programming Languages:</strong> JavaScript, Java, C/C++,
