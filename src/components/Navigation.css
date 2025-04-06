@@ -1,9 +1,0 @@
-.custom-nav {
-  font-size: 1rem;
-  transition: color 0.3s;
-}
-
-.custom-nav:hover {
-  color: #0dcaf0;
-  text-decoration: underline;
-}
