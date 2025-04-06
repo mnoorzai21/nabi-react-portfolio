@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b515b293f2496e582d62c7c9e506d6dc",
+    "revision": "f02451e85fa45605c5904e48acc693de",
     "url": "/nabi-react-portfolio/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nabi-react-portfolio/static/css/2.04b36542.chunk.css"
   },
   {
-    "revision": "046bdb56a214712fad86",
-    "url": "/nabi-react-portfolio/static/css/main.161d0676.chunk.css"
+    "revision": "6a31765444e488f9f4c3",
+    "url": "/nabi-react-portfolio/static/css/main.a791851a.chunk.css"
   },
   {
     "revision": "db7e53d4d1ccadb569ef",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nabi-react-portfolio/static/js/2.b06da317.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "046bdb56a214712fad86",
-    "url": "/nabi-react-portfolio/static/js/main.a0c4104b.chunk.js"
+    "revision": "6a31765444e488f9f4c3",
+    "url": "/nabi-react-portfolio/static/js/main.272a6fa3.chunk.js"
   },
   {
     "revision": "be16317e4a3c3a76ed78",
