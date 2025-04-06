@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./components/Home";
-import AboutMe from "./components/AboutMe";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Resume from "./components/Resume";
+import AboutMe from "./components/pages/AboutMeAboutMe";
+import Projects from "./components/pages/PortfolioPortfolio";
+import Contact from "./components/pages/ContactContact";
+import Resume from "./components/pages/ResumeResume";
 import Navigation from "./components/Navigation";
 
 function App() {
