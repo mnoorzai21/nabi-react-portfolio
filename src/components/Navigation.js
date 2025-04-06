@@ -3,24 +3,17 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 
 export default function Navigation(props) {
   return (
-    <Navbar collapseOnSelect expand="lg" className="navbar-dark bg-dark p-3">
+    <Navbar collapseOnSelect expand="sm" className="row p-3 text-light">
       <Container>
-        {/* Navbar Brand */}
-        <Navbar.Brand href="#home" className="h2 text-light">
-          Mohammad Nabi Noorzai
-        </Navbar.Brand>
-
-        {/* Navbar Toggle for mobile view */}
+        <h2>Mohammad Nabi Noorzai</h2>
+        <Navbar.Brand href="#home"></Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           id="custom-nav-button"
         />
-
-        {/* Navbar Collapse */}
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto">
-            {" "}
-            {/* ms-auto aligns the nav items to the right */}
+          <Nav className="me-auto"></Nav>
+          <Nav>
             <Nav.Link
               href="#aboutme"
               className={`text-light custom-nav ${
