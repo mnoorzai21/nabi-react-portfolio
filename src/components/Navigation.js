@@ -14,32 +14,32 @@ export default function Navigation(props) {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"></Nav>
           <Nav>
+            <Nav className="me-auto"></Nav>
             <Nav.Link
               href="#aboutme"
               className="text-light custom-nav"
-              onClick={() => props.handlePageChange("AboutMe")}
-            >
+              onClick={() => props.handlePageChange("AboutMe")}>
               About Me
             </Nav.Link>
+            <Nav className="me-auto"></Nav>
             <Nav.Link
               href="#projects"
               className="text-light custom-nav"
-              onClick={() => props.handlePageChange("Projects")}
-            >
+              onClick={() => props.handlePageChange("Projects")}>
               Projects
             </Nav.Link>
+            <Nav className="me-auto"></Nav>
             <Nav.Link
               href="#contact"
               className="text-light custom-nav"
-              onClick={() => props.handlePageChange("Contact")}
-            >
+              onClick={() => props.handlePageChange("Contact")}>
               Contact
             </Nav.Link>
+            <Nav className="me-auto"></Nav>
             <Nav.Link
               href="#resume"
               className="text-light custom-nav"
-              onClick={() => props.handlePageChange("Resume")}
-            >
+              onClick={() => props.handlePageChange("Resume")}>
               Resume
             </Nav.Link>
           </Nav>
