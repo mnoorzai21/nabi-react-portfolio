@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/nabi-react-portfolio/static/css/main.da47c745.chunk.css",
+    "main.css": "/nabi-react-portfolio/static/css/main.77d5cd4f.chunk.css",
     "main.js": "/nabi-react-portfolio/static/js/main.95513b96.chunk.js",
     "main.js.map": "/nabi-react-portfolio/static/js/main.95513b96.chunk.js.map",
     "runtime-main.js": "/nabi-react-portfolio/static/js/runtime-main.b695beca.js",
@@ -9,10 +9,10 @@
     "static/js/2.b06da317.chunk.js": "/nabi-react-portfolio/static/js/2.b06da317.chunk.js",
     "static/js/2.b06da317.chunk.js.map": "/nabi-react-portfolio/static/js/2.b06da317.chunk.js.map",
     "index.html": "/nabi-react-portfolio/index.html",
-    "precache-manifest.f7b5a55cb52c2daba46604592ee1b2d4.js": "/nabi-react-portfolio/precache-manifest.f7b5a55cb52c2daba46604592ee1b2d4.js",
+    "precache-manifest.1596341332b8b136555fd7a9a949a66a.js": "/nabi-react-portfolio/precache-manifest.1596341332b8b136555fd7a9a949a66a.js",
     "service-worker.js": "/nabi-react-portfolio/service-worker.js",
     "static/css/2.04b36542.chunk.css.map": "/nabi-react-portfolio/static/css/2.04b36542.chunk.css.map",
-    "static/css/main.da47c745.chunk.css.map": "/nabi-react-portfolio/static/css/main.da47c745.chunk.css.map",
+    "static/css/main.77d5cd4f.chunk.css.map": "/nabi-react-portfolio/static/css/main.77d5cd4f.chunk.css.map",
     "static/js/2.b06da317.chunk.js.LICENSE.txt": "/nabi-react-portfolio/static/js/2.b06da317.chunk.js.LICENSE.txt",
     "static/media/Nabis_Resume.pdf": "/nabi-react-portfolio/static/media/Nabis_Resume.b9503e1c.pdf",
     "static/media/index.css": "/nabi-react-portfolio/static/media/background.89205dce.png",
@@ -28,7 +28,7 @@
     "static/js/runtime-main.b695beca.js",
     "static/css/2.04b36542.chunk.css",
     "static/js/2.b06da317.chunk.js",
-    "static/css/main.da47c745.chunk.css",
+    "static/css/main.77d5cd4f.chunk.css",
     "static/js/main.95513b96.chunk.js"
   ]
 }
