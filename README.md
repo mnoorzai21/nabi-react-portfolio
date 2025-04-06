@@ -2,7 +2,7 @@
 
 ## Description
 
-This is Mohammad Nabi Noorzai's react portfolio.
+This is Mohammad Nabi Noorzai's React portfolio.
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@ This is Mohammad Nabi Noorzai's react portfolio.
 
 ## Link
 
-[Deployed Application Link](https://mnoorzai21.github.io/nabi-react-portfolio)
+Portfolio Link: [Deployed Application Link](https://mnoorzai21.github.io/nabi-react-portfolio)
 
 GitHub: [https://github.com/mnoorzai21/nabi-react-portfolio](https://github.com/mnoorzai21/nabi-react-portfolio)
 
