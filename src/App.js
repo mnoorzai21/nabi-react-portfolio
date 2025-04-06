@@ -20,7 +20,7 @@ function App() {
 
       <main>
         <Routes>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={AboutMe} />
           <Route path="components\pages\AboutMe.js" component={AboutMe} />
           <Route path="components\pages\Portfolio.js" component={Portfolio} />
           <Route path="components\pages\Contact.js" component={Contact} />
