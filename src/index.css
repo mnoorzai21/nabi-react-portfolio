@@ -69,6 +69,30 @@ code {
   }
 }
 
+/* Apply consistent spacing for navbar items */
+.navbar-nav .nav-item {
+  margin-left: 1rem;  /* Adds space between the navbar buttons */
+}
+
+.navbar-nav .nav-link {
+  padding: 0.5rem 1rem;  /* Adjust padding if necessary */
+}
+
+/* To make sure the navbar spans the full width */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Optionally, you can add some styling to adjust responsiveness */
+@media (max-width: 768px) {
+  .navbar-nav {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 480px) {
   body {
     font-size: 14px;

@@ -19,8 +19,8 @@ export default function Footer() {
             <FaGithub />
           </a>
           <a
-            className="btn btn-info btn-floating m-1" // You can change this to btn-info or other color if desired.
-            href="https://twitter.com/NewCoder2021" // Replace this with your actual Twitter handle
+            className="btn btn-info btn-floating m-1" 
+            href="https://twitter.com/NewCoder2021" 
             role="button">
             <FaTwitter />
           </a>
