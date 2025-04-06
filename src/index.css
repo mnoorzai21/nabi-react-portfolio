@@ -62,7 +62,7 @@ code {
     width: 90%;
   }
 
-.myphotoContainer {
+  .myphotoContainer {
     width: 150px;
     height: 150px;
   }
@@ -83,11 +83,6 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.contact-page {
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
 }
 
 /* Optionally, you can add some styling to adjust responsiveness */
