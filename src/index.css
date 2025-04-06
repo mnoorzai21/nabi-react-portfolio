@@ -6,15 +6,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: aliceblue;
-  background-color: blanchedalmond;
+  background-color:blanchedalmond;
   background-image: url("../src/images/background.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
 
 code {
@@ -24,19 +21,14 @@ code {
 
 .custom-card {
   width: 25rem;
-  max-width: 100%;
-  padding: 1rem;
-  box-sizing: border-box;
 }
 
 .custom-img {
   opacity: 0.8;
 }
-
 .custom-card-info {
   opacity: 0;
 }
-
 .custom-card-info:hover {
   color: white;
   background-color: rgb(83, 103, 140);
@@ -44,57 +36,18 @@ code {
   opacity: 0.9;
 }
 
-.my-photo {
+.my-photo{
   width: 100%;
   height: 100%;
   overflow: hidden;
   border-radius: 50%;
   object-fit: cover;
 }
-
-.myphotoContainer {
+.myphotoContainer{
   width: 300px;
   height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-}
-
-@media (max-width: 768px) {
-  .custom-card {
-    width: 90%;
-  }
-
-  .myphotoContainer {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-
-  .custom-card {
-    width: 100%;
-    padding: 0.5rem;
-  }
-
-  .myphotoContainer {
-    width: 150px;
-    height: 150px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .custom-card {
-    width: 30rem;
-  }
-
-  .myphotoContainer {
-    width: 400px;
-    height: 400px;
-  }
 }
