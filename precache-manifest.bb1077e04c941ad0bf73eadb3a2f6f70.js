@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bf1f1f0e93f86be8d0e682a585a062e6",
+    "revision": "091cd37ef58f60c95c8baa3706234bf7",
     "url": "/nabi-react-portfolio/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nabi-react-portfolio/static/css/2.04b36542.chunk.css"
   },
   {
-    "revision": "4f26623d4eb7de83a3cc",
+    "revision": "15956716c402cff8a563",
     "url": "/nabi-react-portfolio/static/css/main.1d5c0598.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nabi-react-portfolio/static/js/2.b06da317.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4f26623d4eb7de83a3cc",
-    "url": "/nabi-react-portfolio/static/js/main.fffc31ce.chunk.js"
+    "revision": "15956716c402cff8a563",
+    "url": "/nabi-react-portfolio/static/js/main.0faf35a8.chunk.js"
   },
   {
     "revision": "be16317e4a3c3a76ed78",
