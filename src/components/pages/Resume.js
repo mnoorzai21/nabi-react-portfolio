@@ -4,10 +4,10 @@ import myResume from "../../images/Nabis_Resume.pdf";
 export default function Resume() {
   return (
     <div className="container container-fluid text-center text-light m-6">
-      <div className="card-header">
-        <h2>Resume and Skills</h2>
-      </div>
       <div className="card-body">
+      
+        <h2>Resume and Skills</h2>
+     
         <h4>
           <span role="img" aria-label="laptop">
             💻
