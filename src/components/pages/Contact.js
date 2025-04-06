@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { validateEmail } from "../../utils/validator";
-import React, { useState } from "react";
 
 export default function Contact() {
   const [formState, setFormState] = useState({
