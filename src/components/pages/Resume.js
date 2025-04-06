@@ -5,16 +5,13 @@ export default function Resume() {
   return (
     <div className="container container-fluid text-center text-light m-6">
       <div className="card-body">
-      
         <h2>Resume and Skills</h2>
-     
         <h4>
           <span role="img" aria-label="laptop">
             💻
           </span>
           Technical Skills
         </h4>
-
         <p>
           <strong>Programming Languages:</strong> JavaScript, Java, C/C++,
           Python
@@ -35,7 +32,6 @@ export default function Resume() {
         <p>
           <strong>AI & Data:</strong> Artificial Intelligence, Machine Learning
         </p>
-
         <a href={myResume} download className="btn btn-success mt-3">
           Download My Resume
         </a>
