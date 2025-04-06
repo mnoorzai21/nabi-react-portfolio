@@ -110,10 +110,10 @@ export default function Contact() {
             Submit
           </button>
         </form>
-      </div>
-      <div id="email-link">
-        Email me at:{" "}
-        <a href="mailto: mnoorzai21@gmail.com">mnoorzai21@gmail.com</a>
+        <div id="email-link">
+          Email me at:{" "}
+          <a href="mailto: mnoorzai21@gmail.com">mnoorzai21@gmail.com</a>
+        </div>
       </div>
     </section>
   );
