@@ -7,8 +7,10 @@ import Navigation from "./Navigation";
 import Footer from "./Footer";
 
 export default function Home() {
-  // Declare a new state variable, which we'll call "count"
   const [currentPage, setCurrentPage] = useState("AboutMe");
+
+  // Function to handle page change
+  const handlePageChange = (page) => setCurrentPage(page);
 
   const renderPage = () => {
     switch (currentPage) {
@@ -29,7 +31,7 @@ export default function Home() {
     <div>
       <Navigation
         currentPage={currentPage}
-        handlePageChange={(page) => setCurrentPage(page)}
+        handlePageChange={handlePageChange}
       />
       {renderPage()}
       <Footer />

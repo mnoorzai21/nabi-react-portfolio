@@ -16,30 +16,34 @@ export default function Navigation(props) {
           <Nav>
             <Nav.Link
               href="#aboutme"
-              className="text-light custom-nav"
-              onClick={() => props.handlePageChange("AboutMe")}
-            >
+              className={`text-light custom-nav ${
+                props.currentPage === "AboutMe" ? "active" : ""
+              }`}
+              onClick={() => props.handlePageChange("AboutMe")}>
               About Me
             </Nav.Link>
             <Nav.Link
               href="#projects"
-              className="text-light custom-nav"
-              onClick={() => props.handlePageChange("Projects")}
-            >
+              className={`text-light custom-nav ${
+                props.currentPage === "Projects" ? "active" : ""
+              }`}
+              onClick={() => props.handlePageChange("Projects")}>
               Projects
             </Nav.Link>
             <Nav.Link
               href="#contact"
-              className="text-light custom-nav"
-              onClick={() => props.handlePageChange("Contact")}
-            >
+              className={`text-light custom-nav ${
+                props.currentPage === "Contact" ? "active" : ""
+              }`}
+              onClick={() => props.handlePageChange("Contact")}>
               Contact
             </Nav.Link>
             <Nav.Link
               href="#resume"
-              className="text-light custom-nav"
-              onClick={() => props.handlePageChange("Resume")}
-            >
+              className={`text-light custom-nav ${
+                props.currentPage === "Resume" ? "active" : ""
+              }`}
+              onClick={() => props.handlePageChange("Resume")}>
               Resume
             </Nav.Link>
           </Nav>
