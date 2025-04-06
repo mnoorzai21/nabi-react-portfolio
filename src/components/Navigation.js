@@ -1,43 +1,47 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { Link, useLocation } from "react-router-dom";
-import "./Navigation.css"; // Optional: if you want to add custom styles
 
 export default function Navigation(props) {
-  const location = useLocation();
-
-  const navLinkClass = (path) =>
-    `text-light custom-nav nav-link mx-2 ${
-      location.pathname === path ? "active fw-bold" : ""
-    }`;
-
   return (
-    <Navbar
-      collapseOnSelect
-      expand="sm"
-      variant="dark"
-      className="bg-transparent py-3"
-    >
-      <Container className="d-flex justify-content-between align-items-center">
-        <Navbar.Brand as={Link} to="/" className="text-light fs-4 fw-bold">
-          Mohammad Nabi Noorzai
-        </Navbar.Brand>
-
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+    <Navbar collapseOnSelect expand="sm" className="row p-3 text-light">
+      <Container>
+        <h2>Mohammad Nabi Noorzai</h2>
+        <Navbar.Brand href="#home"></Navbar.Brand>
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          id="custom-nav-button"
+        />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto"></Nav>
           <Nav>
-            <Link to="/aboutme" className={navLinkClass("/aboutme")}>
+            <Nav.Link
+              href="#aboutme"
+              className="text-light custom-nav"
+              onClick={() => props.handlePageChange("AboutMe")}
+            >
               About Me
-            </Link>
-            <Link to="/projects" className={navLinkClass("/projects")}>
+            </Nav.Link>
+            <Nav.Link
+              href="#projects"
+              className="text-light custom-nav"
+              onClick={() => props.handlePageChange("Projects")}
+            >
               Projects
-            </Link>
-            <Link to="/contact" className={navLinkClass("/contact")}>
+            </Nav.Link>
+            <Nav.Link
+              href="#contact"
+              className="text-light custom-nav"
+              onClick={() => props.handlePageChange("Contact")}
+            >
               Contact
-            </Link>
-            <Link to="/resume" className={navLinkClass("/resume")}>
+            </Nav.Link>
+            <Nav.Link
+              href="#resume"
+              className="text-light custom-nav"
+              onClick={() => props.handlePageChange("Resume")}
+            >
               Resume
-            </Link>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
