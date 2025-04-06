@@ -1,44 +1,63 @@
 import React, { useState } from "react";
 import { validateEmail } from "../../utils/validator";
 
+
 export default function Contact() {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
     message: "",
   });
+
   const [errorMessage, setErrorMessage] = useState("");
 
   function handleChange(event) {
-    if (event.target.name === "email") {
-      const isValid = validateEmail(event.target.value);
+    const { name, value } = event.target;
 
+    // Validate fields
+    if (name === "email") {
+      const isValid = validateEmail(value);
       if (!isValid) {
-        setErrorMessage("please enter a valid email");
+        setErrorMessage("Please enter a valid email.");
       } else {
         setErrorMessage("");
       }
     } else {
-      if (!event.target.value.length) {
-        setErrorMessage(`${event.target.name} is required.`);
+      if (!value.trim()) {
+        setErrorMessage(`${name} is required.`);
       } else {
         setErrorMessage("");
       }
     }
 
-    if (!errorMessage) {
-      setFormState({ ...formState, [event.target.name]: event.target.value });
-    }
+    // Always update the form state
+    setFormState({ ...formState, [name]: value });
   }
+
   function handleFormSubmit(event) {
     event.preventDefault();
+    if (!formState.name || !formState.email || !formState.message) {
+      setErrorMessage("All fields are required.");
+      return;
+    }
+    if (errorMessage) {
+      return;
+    }
+
+    // You can handle actual form submission here
+    console.log("Form submitted:", formState);
+    alert("Thank you! Your message has been sent.");
+
+    // Reset form
+    setFormState({ name: "", email: "", message: "" });
   }
 
   return (
     <section className="row text-light -align-center col-9 justify-content-left">
-      <div className="col-12 col-md-6 col-lg-6">
-        <form className="p-3 rounded" onSubmit={handleFormSubmit}>
+      <div className="col-12 col-md-10 col-lg-6">
+        <form className="p-4 rounded" onSubmit={handleFormSubmit}>
           <h2>Contact</h2>
+
           <div className="form-group">
             <label htmlFor="name" className="mb-1">
               Name
@@ -48,7 +67,9 @@ export default function Contact() {
               type="text"
               name="name"
               defaultValue={formState.name}
+              onChange={handleChange}
               onBlur={handleChange}
+              placeholder="Your name"
             />
           </div>
           <div className="form-group">
@@ -60,7 +81,9 @@ export default function Contact() {
               type="email"
               name="email"
               defaultValue={formState.email}
+              onChange={handleChange}
               onBlur={handleChange}
+              placeholder="Your email"
             />
           </div>
 
@@ -70,17 +93,20 @@ export default function Contact() {
             </label>
             <textarea
               className="form-control"
-              rows="3"
+              rows="5"
               name="message"
-              defaultValue={formState.message}
-              onBlur={handleChange}></textarea>
+              value={formState.message}
+              onChange={handleChange}
+              onBlur={handleChange}
+              placeholder="Your message"
+            />
           </div>
           {errorMessage && (
             <div className="my-1 p-1 bg-warning text-secondary rounded">
               {errorMessage}
             </div>
           )}
-          <button type="submit" className="btn btn-success mt-4">
+          <button type="submit" className="btn btn-success mt-4 w-100">
             Submit
           </button>
         </form>
