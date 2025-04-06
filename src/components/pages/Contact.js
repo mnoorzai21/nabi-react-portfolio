@@ -52,7 +52,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="container container-fluid row text-light -align-center col-9 justify-content-left">
+    <section className="container-fluid d-flex text-light flex-row flex-wrap justify-content-center">
       <div className="col-12 col-md-6 col-lg-6">
         <form className="p-4 rounded" onSubmit={handleFormSubmit}>
           <h2>Contact</h2>
@@ -105,9 +105,9 @@ export default function Contact() {
             </div>
           )}
           <div>
-          <button type="submit" className="btn btn-success mt-4 w-100">
-            Submit
-          </button>
+            <button type="submit" className="btn btn-success mt-4 w-100">
+              Submit
+            </button>
           </div>
           <div id="email-link">
             Email me at:{" "}

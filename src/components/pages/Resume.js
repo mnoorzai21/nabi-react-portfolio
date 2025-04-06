@@ -3,7 +3,7 @@ import myResume from "../../images/Nabis_Resume.pdf";
 
 export default function Resume() {
   return (
-    <div className="container container-fluid text-center text-light m-6">
+    <div className="container-fluid d-flex text-light flex-row flex-wrap justify-content-center">
       <div className="card-header">
         <h2>Resume and Skills</h2>
       </div>
