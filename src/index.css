@@ -93,6 +93,12 @@ code {
   }
 }
 
+.main-content {
+  margin-top: 80px; /* to offset navbar height */
+  padding: 1rem;
+}
+
+
 @media (max-width: 480px) {
   body {
     font-size: 14px;
