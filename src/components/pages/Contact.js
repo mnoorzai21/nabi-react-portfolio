@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { validateEmail } from "../../utils/validator";
+import React, { useState } from "react";
 
 export default function Contact() {
   const [formState, setFormState] = useState({
@@ -52,68 +53,75 @@ export default function Contact() {
   }
 
   return (
-    <section className="row text-light align-center col-9 justify-content-left">
-      <div className="col-12 col-md-6 col-lg-6">
-        <form className="p-3 rounded" onSubmit={handleFormSubmit}>
-          <h2>Contact</h2>
+    <section className="container text-light py-5">
+      <div className="row justify-content-center">
+        <div className="col-12 col-md-8 col-lg-6">
+          <form className="p-4 bg-dark rounded" onSubmit={handleFormSubmit}>
+            <h2 className="text-center mb-4">Contact</h2>
 
-          <div className="form-group">
-            <label htmlFor="name" className="mb-1">
-              Name
-            </label>
-            <input
-              className="form-control"
-              type="text"
-              name="name"
-              value={formState.name}
-              onChange={handleChange}
-              onBlur={handleChange}
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="email" className="mb-1">
-              Email address
-            </label>
-            <input
-              className="form-control"
-              type="email"
-              name="email"
-              value={formState.email}
-              onChange={handleChange}
-              onBlur={handleChange}
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="message" className="mb-1">
-              Message
-            </label>
-            <textarea
-              className="form-control"
-              rows="3"
-              name="message"
-              value={formState.message}
-              onChange={handleChange}
-              onBlur={handleChange}
-            />
-          </div>
-
-          {errorMessage && (
-            <div className="my-1 p-1 bg-warning text-secondary rounded">
-              {errorMessage}
+            <div className="form-group">
+              <label htmlFor="name" className="mb-1">
+                Name
+              </label>
+              <input
+                className="form-control"
+                type="text"
+                name="name"
+                value={formState.name}
+                onChange={handleChange}
+                onBlur={handleChange}
+                placeholder="Your name"
+              />
             </div>
-          )}
 
-          <button type="submit" className="btn btn-success mt-4">
-            Submit
-          </button>
-        </form>
+            <div className="form-group">
+              <label htmlFor="email" className="mb-1">
+                Email address
+              </label>
+              <input
+                className="form-control"
+                type="email"
+                name="email"
+                value={formState.email}
+                onChange={handleChange}
+                onBlur={handleChange}
+                placeholder="Your email"
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="message" className="mb-1">
+                Message
+              </label>
+              <textarea
+                className="form-control"
+                rows="5"
+                name="message"
+                value={formState.message}
+                onChange={handleChange}
+                onBlur={handleChange}
+                placeholder="Your message"
+              />
+            </div>
+
+            {errorMessage && (
+              <div className="my-2 p-2 bg-warning text-dark rounded">
+                {errorMessage}
+              </div>
+            )}
+
+            <button type="submit" className="btn btn-success mt-4 w-100">
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
 
-      <div id="email-link" className="mt-4 col-12">
-        Email me at:{" "}
-        <a href="mailto:mnoorzai21@gmail.com">mnoorzai21@gmail.com</a>
+      <div id="email-link" className="text-center mt-4">
+        <p>
+          Email me at:{" "}
+          <a href="mailto:mnoorzai21@gmail.com">mnoorzai21@gmail.com</a>
+        </p>
       </div>
     </section>
   );
