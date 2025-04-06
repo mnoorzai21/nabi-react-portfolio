@@ -19,13 +19,13 @@ function App() {
       />
 
       <main>
-        <Switch>
+        <Routes>
           <Route exact path="/" component={Home} />
           <Route path="components\pages\AboutMe.js" component={AboutMe} />
           <Route path="components\pages\Portfolio.js" component={Portfolio} />
           <Route path="components\pages\Contact.js" component={Contact} />
           <Route path="components\pages\Resume.js" component={Resume} />
-        </Switch>
+        </Routes>
       </main>
     </Router>
   );
