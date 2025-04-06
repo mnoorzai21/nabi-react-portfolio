@@ -6,12 +6,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: aliceblue;
-  background-color:blanchedalmond;
+  background-color: blanchedalmond;
   background-image: url("../src/images/background.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 code {
@@ -30,7 +33,7 @@ code {
   opacity: 0.8;
 }
 .custom-card-info {
-  opacity: 0.8;
+  opacity: 0;
 }
 .custom-card-info:hover {
   color: white;
