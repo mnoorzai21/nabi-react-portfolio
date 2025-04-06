@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { validateEmail } from "../../utils/validator";
 
-
 export default function Contact() {
   const [formState, setFormState] = useState({
     name: "",
@@ -109,11 +108,11 @@ export default function Contact() {
           <button type="submit" className="btn btn-success mt-4 w-100">
             Submit
           </button>
+          <div id="email-link">
+            Email me at:{" "}
+            <a href="mailto: mnoorzai21@gmail.com">mnoorzai21@gmail.com</a>
+          </div>
         </form>
-        <div id="email-link">
-          Email me at:{" "}
-          <a href="mailto: mnoorzai21@gmail.com">mnoorzai21@gmail.com</a>
-        </div>
       </div>
     </section>
   );
