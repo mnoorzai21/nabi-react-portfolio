@@ -5,12 +5,10 @@ export default function Resume() {
   return (
     <div className="text-center text-light m-6">
       <div className="card-header">
-        <h2>Resume</h2>
+        <h2>Resume and Skills</h2>
       </div>
       <div className="card-body">
-        <h5 className="card-title">Skills</h5>
-
-        <h4>💻 Technical Skills</h4>
+       <h4>💻 Technical Skills</h4>
 
         <p>
           <strong>Programming Languages:</strong> JavaScript, Java, C/C++,
