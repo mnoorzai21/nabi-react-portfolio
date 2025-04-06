@@ -85,7 +85,6 @@ export default function Contact() {
               placeholder="Your email"
             />
           </div>
-
           <div className="form-group">
             <label htmlFor="message" className="mb-1">
               Message
@@ -105,9 +104,11 @@ export default function Contact() {
               {errorMessage}
             </div>
           )}
+          <div>
           <button type="submit" className="btn btn-success mt-4 w-100">
             Submit
           </button>
+          </div>
           <div id="email-link">
             Email me at:{" "}
             <a href="mailto: mnoorzai21@gmail.com">mnoorzai21@gmail.com</a>
