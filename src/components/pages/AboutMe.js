@@ -19,11 +19,11 @@ export default function AboutMe() {
       <div className="load about-me p-4">
         <p>
           As a dedicated Computer Science graduate from San Diego State
-          University (SDSU), class of December 2024, I bring a wealth of
-          knowledge and practical experience to the field. My educational
-          background also includes an Associate's degree in Computer Science
-          from San Diego Mesa College and a certificate in Web Development from
-          the University of California, San Diego.
+          University (SDSU), class of May 2025, I bring a wealth of knowledge
+          and practical experience to the field. My educational background also
+          includes an Associate's degree in Computer Science from San Diego Mesa
+          College and a certificate in Web Development from the University of
+          California, San Diego.
         </p>
 
         <p>
