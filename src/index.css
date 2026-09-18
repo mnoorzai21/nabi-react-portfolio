@@ -1,3 +1,20 @@
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../src/images/background.png");
+  background-size: cover;      /* Makes image cover entire area */
+  background-position: center; /* Centers image */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: keeps image fixed */
+}
+
 body {
   margin: 0;
   padding: 0;
