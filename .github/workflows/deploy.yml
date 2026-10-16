@@ -31,14 +31,15 @@ jobs:
           fi
       - name: Build
         run: npm run build
-      # Pull requests: keep the build so it can be previewed before merging.
-      - name: Upload preview
-        if: github.event_name == 'pull_request'
-        uses: actions/upload-artifact@v4
+      # Pull requests: publish the build to a "preview" branch so it can be
+      # checked before merging. GitHub Pages still serves only gh-pages.
+      - name: Publish preview build
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          name: site-preview
-          path: build
-          retention-days: 7
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: preview
       # Publish the build to the gh-pages branch, which GitHub Pages serves.
       - name: Deploy to GitHub Pages
         if: github.event_name != 'pull_request'
