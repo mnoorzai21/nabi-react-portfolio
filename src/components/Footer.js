@@ -1,29 +1,46 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+
+const links = [
+  {
+    href: "https://www.linkedin.com/in/mnoorzai21/",
+    label: "LinkedIn",
+    className: "btn-primary",
+    icon: <FaLinkedin />,
+  },
+  {
+    href: "https://github.com/mnoorzai21",
+    label: "GitHub",
+    className: "btn-dark",
+    icon: <FaGithub />,
+  },
+  {
+    href: "mailto:mnoorzai21@gmail.com",
+    label: "Email",
+    className: "btn-success",
+    icon: <FaEnvelope />,
+  },
+];
 
 export default function Footer() {
   return (
     <footer className="text-center text-white fixed-bottom">
       <div className="container p-4 pb-0">
         <section className="mb-4">
-          <a
-            className="btn btn-primary btn-floating m-1"
-            href="https://www.linkedin.com/in/mnoorzai21/"
-            role="button">
-            <FaLinkedin />
-          </a>
-          <a
-            className="btn btn-dark btn-floating m-1"
-            href="https://github.com/mnoorzai21"
-            role="button">
-            <FaGithub />
-          </a>
-          <a
-            className="btn btn-info btn-floating m-1" 
-            href="https://twitter.com/NewCoder2021" 
-            role="button">
-            <FaTwitter />
-          </a>
+          {links.map((link) => (
+            <a
+              key={link.label}
+              className={`btn ${link.className} btn-floating m-1`}
+              href={link.href}
+              aria-label={link.label}
+              title={link.label}
+              {...(link.href.startsWith("http")
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
+            >
+              {link.icon}
+            </a>
+          ))}
         </section>
       </div>
     </footer>

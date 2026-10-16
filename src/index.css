@@ -49,15 +49,59 @@ code {
 
 .custom-img {
   opacity: 0.8;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
 }
 .custom-card-info {
   opacity: 0;
+  overflow-y: auto;
+  transition: opacity 0.7s, background-color 0.7s;
 }
-.custom-card-info:hover {
+/* Show project details on hover, and when a button inside has keyboard focus. */
+.custom-card:hover .custom-card-info,
+.custom-card-info:focus-within {
   color: white;
   background-color: rgb(83, 103, 140);
-  transition: 0.7s;
+  opacity: 0.95;
+}
+.card-tech {
+  font-size: 0.85rem;
+  font-style: italic;
   opacity: 0.9;
+}
+
+/* Phones and tablets have no hover: show the details under each screenshot. */
+@media (hover: none) {
+  .custom-card-info {
+    position: static;
+    opacity: 1;
+    background-color: rgb(83, 103, 140);
+    border-radius: 0 0 0.375rem 0.375rem;
+  }
+}
+
+/* Leave room for the fixed footer so it never covers page content. */
+.page-content {
+  padding-bottom: 110px;
+}
+
+.contact-form {
+  background-color: rgba(20, 24, 33, 0.75);
+}
+.contact-intro {
+  color: #d8dee9;
+}
+.contact-form a {
+  color: #9ec5fe;
+}
+
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
 }
 
 .my-photo{
@@ -142,4 +186,12 @@ code {
     width: 350px;
     height: 350px;
   }
+}
+
+.resume-card {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(20, 24, 33, 0.75);
+  border-radius: 0.5rem;
 }
