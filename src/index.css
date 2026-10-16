@@ -195,3 +195,18 @@ code {
   background-color: rgba(20, 24, 33, 0.75);
   border-radius: 0.5rem;
 }
+
+.site-name {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+.active-nav {
+  border-bottom: 2px solid #20c997;
+}
+.about-lead {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.about-actions {
+  margin-top: 1rem;
+}
