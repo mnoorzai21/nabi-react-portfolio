@@ -22,7 +22,13 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - run: npm ci
+      - name: Install dependencies
+        run: |
+          set -o pipefail
+          if ! npm ci 2>&1 | tee npm-ci.log; then
+            grep -E "npm (error|ERR)" npm-ci.log | head -15 | while IFS= read -r line; do echo "::error::$line"; done
+            exit 1
+          fi
       - name: Build
         run: npm run build
       # Pull requests: keep the build so it can be previewed before merging.
