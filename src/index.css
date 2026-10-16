@@ -49,9 +49,9 @@ code {
 
 .custom-img {
   opacity: 0.8;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-  object-position: top;
+  object-position: top left;
 }
 .custom-card-info {
   opacity: 0;
@@ -71,8 +71,8 @@ code {
   opacity: 0.9;
 }
 
-/* Phones and tablets have no hover: show the details under each screenshot. */
-@media (hover: none) {
+/* Touch screens and small screens: show the details under each screenshot. */
+@media (hover: none), (pointer: coarse), (max-width: 768px) {
   .custom-card-info {
     position: static;
     opacity: 1;
