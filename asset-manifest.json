@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/nabi-react-portfolio/static/css/main.bafe09c6.css",
+    "main.css": "/nabi-react-portfolio/static/css/main.2b8e3087.css",
     "main.js": "/nabi-react-portfolio/static/js/main.26af306f.js",
     "static/media/book-search.jpg": "/nabi-react-portfolio/static/media/book-search.8aab09bdf2792761202d.jpg",
     "static/media/weather-dashboard.jpg": "/nabi-react-portfolio/static/media/weather-dashboard.44f347ac80991d1c41b1.jpg",
@@ -10,11 +10,11 @@
     "static/media/myphoto.jpg": "/nabi-react-portfolio/static/media/myphoto.4e81125040bc9c4f9a38.jpg",
     "static/media/Mohammad_Nabi_Noorzai_Resume.pdf": "/nabi-react-portfolio/static/media/Mohammad_Nabi_Noorzai_Resume.0a1d8cf3d3122634e58b.pdf",
     "index.html": "/nabi-react-portfolio/index.html",
-    "main.bafe09c6.css.map": "/nabi-react-portfolio/static/css/main.bafe09c6.css.map",
+    "main.2b8e3087.css.map": "/nabi-react-portfolio/static/css/main.2b8e3087.css.map",
     "main.26af306f.js.map": "/nabi-react-portfolio/static/js/main.26af306f.js.map"
   },
   "entrypoints": [
-    "static/css/main.bafe09c6.css",
+    "static/css/main.2b8e3087.css",
     "static/js/main.26af306f.js"
   ]
 }
