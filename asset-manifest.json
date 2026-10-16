@@ -1,22 +1,20 @@
 {
   "files": {
-    "main.css": "/nabi-react-portfolio/static/css/main.f99748e0.css",
-    "main.js": "/nabi-react-portfolio/static/js/main.7b9983e4.js",
-    "static/media/project-2.jpeg": "/nabi-react-portfolio/static/media/project-2.cb2c4efa50a2e8151e76.jpeg",
-    "static/media/project-1.png": "/nabi-react-portfolio/static/media/project-1.624f4b103f414088c11b.png",
-    "static/media/weather-dashboard.png": "/nabi-react-portfolio/static/media/weather-dashboard.c7ddd18ce54d3e412061.png",
-    "static/media/monitorList-screenshot.png": "/nabi-react-portfolio/static/media/monitorList-screenshot.fdd58a97cd1dcb10c7d4.png",
-    "static/media/bookSearch-screenshot.png": "/nabi-react-portfolio/static/media/bookSearch-screenshot.00f4678880fc5bc2920b.png",
-    "static/media/myphoto.jpg": "/nabi-react-portfolio/static/media/myphoto.6a8cd91558c2a0b8843e.jpg",
+    "main.css": "/nabi-react-portfolio/static/css/main.a93eeea1.css",
+    "main.js": "/nabi-react-portfolio/static/js/main.26af306f.js",
+    "static/media/book-search.jpg": "/nabi-react-portfolio/static/media/book-search.8aab09bdf2792761202d.jpg",
+    "static/media/weather-dashboard.jpg": "/nabi-react-portfolio/static/media/weather-dashboard.44f347ac80991d1c41b1.jpg",
     "static/media/background.png": "/nabi-react-portfolio/static/media/background.c8b051e6f06758ceebe3.png",
-    "static/media/Nabis_Resume.pdf": "/nabi-react-portfolio/static/media/Nabis_Resume.8e518263bcb9f3eb3359.pdf",
     "static/media/password-generator.png": "/nabi-react-portfolio/static/media/password-generator.5c2a23df0c56c79b37d2.png",
+    "static/media/stock-scanner.jpg": "/nabi-react-portfolio/static/media/stock-scanner.38a71f113fec0a0a3cd5.jpg",
+    "static/media/myphoto.jpg": "/nabi-react-portfolio/static/media/myphoto.4e81125040bc9c4f9a38.jpg",
+    "static/media/Mohammad_Nabi_Noorzai_Resume.pdf": "/nabi-react-portfolio/static/media/Mohammad_Nabi_Noorzai_Resume.0a1d8cf3d3122634e58b.pdf",
     "index.html": "/nabi-react-portfolio/index.html",
-    "main.f99748e0.css.map": "/nabi-react-portfolio/static/css/main.f99748e0.css.map",
-    "main.7b9983e4.js.map": "/nabi-react-portfolio/static/js/main.7b9983e4.js.map"
+    "main.a93eeea1.css.map": "/nabi-react-portfolio/static/css/main.a93eeea1.css.map",
+    "main.26af306f.js.map": "/nabi-react-portfolio/static/js/main.26af306f.js.map"
   },
   "entrypoints": [
-    "static/css/main.f99748e0.css",
-    "static/js/main.7b9983e4.js"
+    "static/css/main.a93eeea1.css",
+    "static/js/main.26af306f.js"
   ]
 }
