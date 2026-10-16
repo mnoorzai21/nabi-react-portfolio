@@ -1,4 +1,4 @@
+// Simple, permissive email check: something@something.tld
 export function validateEmail(email) {
-  const pattern = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
-  return pattern.test(String(email).toLowerCase());
+  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(email).trim());
 }
