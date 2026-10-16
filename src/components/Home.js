@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Portfolio";
 import Contact from "./pages/Contact";
@@ -6,16 +6,36 @@ import Resume from "./pages/Resume";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 
-export default function Home() {
-  const [currentPage, setCurrentPage] = useState("AboutMe");
+// Each page has a URL hash, so links like /#projects open that page directly.
+const PAGES = {
+  aboutme: "AboutMe",
+  projects: "Projects",
+  contact: "Contact",
+  resume: "Resume",
+};
 
-  // Function to handle page change
+function pageFromHash() {
+  const hash = window.location.hash.replace("#", "").toLowerCase();
+  return PAGES[hash] || "AboutMe";
+}
+
+export default function Home() {
+  const [currentPage, setCurrentPage] = useState(pageFromHash);
+
+  useEffect(() => {
+    const onHashChange = () => {
+      setCurrentPage(pageFromHash());
+      window.scrollTo(0, 0);
+    };
+
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
+
   const handlePageChange = (page) => setCurrentPage(page);
 
   const renderPage = () => {
     switch (currentPage) {
-      case "AboutMe":
-        return <AboutMe />;
       case "Projects":
         return <Projects />;
       case "Contact":

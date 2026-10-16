@@ -24,13 +24,15 @@ This is the official portfolio website of **Mohammad Nabi Noorzai**, showcasing 
 ## Contact Information
 
 - **Email**: [mnoorzai21@gmail.com](mailto:mnoorzai21@gmail.com)
-- **LinkedIn**: [Mohammad Nabi Noorzai LinkedIn](https://www.linkedin.com/in/mohammad-nabi-noorzai)
+- **LinkedIn**: [linkedin.com/in/mnoorzai21](https://www.linkedin.com/in/mnoorzai21)
   
 ## Technologies Used
 
 This project was built using the following technologies:
 
-- **React**: For building the user interface
+- **React** and **React Bootstrap**: For building the user interface
+- **FormSubmit**: Delivers contact-form messages by email, with no backend needed
+- **GitHub Actions**: Builds and deploys the site to GitHub Pages on every push to `main`
 - **HTML**: For structure and content
 - **CSS**: For styling the application
 - **JavaScript**: For interactivity and dynamic functionality

@@ -1,117 +1,182 @@
 import React, { useState } from "react";
 import { validateEmail } from "../../utils/validator";
 
-export default function Contact() {
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+// FormSubmit forwards messages to this inbox. No account or server needed;
+// the very first message sends a one-time activation email to this address.
+const CONTACT_EMAIL = "mnoorzai21@gmail.com";
+const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
-  const [errorMessage, setErrorMessage] = useState("");
+const EMPTY_FORM = { name: "", email: "", message: "", website: "" };
+
+function validate(form) {
+  if (!form.name.trim()) return "Please enter your name.";
+  if (!validateEmail(form.email)) return "Please enter a valid email address.";
+  if (form.message.trim().length < 10)
+    return "Please enter a message (at least 10 characters).";
+  return "";
+}
+
+export default function Contact() {
+  const [form, setForm] = useState(EMPTY_FORM);
+  const [error, setError] = useState("");
+  const [status, setStatus] = useState("idle"); // idle | sending | sent | failed
 
   function handleChange(event) {
     const { name, value } = event.target;
+    setForm({ ...form, [name]: value });
 
-    // Validate fields
-    if (name === "email") {
-      const isValid = validateEmail(value);
-      if (!isValid) {
-        setErrorMessage("Please enter a valid email.");
-      } else {
-        setErrorMessage("");
-      }
-    } else {
-      if (!value.trim()) {
-        setErrorMessage(`${name} is required.`);
-      } else {
-        setErrorMessage("");
-      }
-    }
-
-    // Always update the form state
-    setFormState({ ...formState, [name]: value });
+    if (error) setError("");
+    if (status !== "idle" && status !== "sending") setStatus("idle");
   }
 
-  function handleFormSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    if (!formState.name || !formState.email || !formState.message) {
-      setErrorMessage("All fields are required.");
-      return;
-    }
-    if (errorMessage) {
+
+    const problem = validate(form);
+    if (problem) {
+      setError(problem);
       return;
     }
 
-    // You can handle actual form submission here
-    console.log("Form submitted:", formState);
-    alert("Thank you! Your message has been sent.");
+    setStatus("sending");
 
-    // Reset form
-    setFormState({ name: "", email: "", message: "" });
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name.trim(),
+          email: form.email.trim(),
+          message: form.message.trim(),
+          _replyto: form.email.trim(),
+          _subject: `Portfolio message from ${form.name.trim()}`,
+          _template: "table",
+          _captcha: "false",
+          _honey: form.website, // filled only by spam bots
+        }),
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok || String(data.success) === "false") {
+        throw new Error(data.message || `Request failed (${response.status})`);
+      }
+
+      setStatus("sent");
+      setForm(EMPTY_FORM);
+    } catch (err) {
+      console.error("Contact form error:", err);
+      setStatus("failed");
+    }
   }
+
+  const sending = status === "sending";
 
   return (
-    <section className="row text-light -align-center col-9 justify-content-left">
-      <div className="col-12 col-md-6 col-lg-6">
-        <form className="p-4 rounded" onSubmit={handleFormSubmit}>
+    <section className="row text-light justify-content-center page-content">
+      <div className="col-12 col-md-8 col-lg-6">
+        <form className="p-4 rounded contact-form" onSubmit={handleSubmit} noValidate>
           <h2>Contact</h2>
+          <p className="contact-intro">
+            I'm open to software engineering, frontend and full-stack roles,
+            remote or in San Diego. Send me a message and I'll reply within a
+            day or two.
+          </p>
 
-          <div className="form-group">
-            <label htmlFor="name" className="mb-1">
+          <div className="form-group mb-3">
+            <label htmlFor="contact-name" className="mb-1">
               Name
             </label>
             <input
+              id="contact-name"
               className="form-control"
               type="text"
               name="name"
-              defaultValue={formState.name}
+              autoComplete="name"
+              value={form.name}
               onChange={handleChange}
-              onBlur={handleChange}
               placeholder="Your name"
+              required
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="email" className="mb-1">
+
+          <div className="form-group mb-3">
+            <label htmlFor="contact-email" className="mb-1">
               Email address
             </label>
             <input
+              id="contact-email"
               className="form-control"
               type="email"
               name="email"
-              defaultValue={formState.email}
+              autoComplete="email"
+              value={form.email}
               onChange={handleChange}
-              onBlur={handleChange}
-              placeholder="Your email"
+              placeholder="you@company.com"
+              required
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="message" className="mb-1">
+
+          <div className="form-group mb-3">
+            <label htmlFor="contact-message" className="mb-1">
               Message
             </label>
             <textarea
+              id="contact-message"
               className="form-control"
               rows="5"
               name="message"
-              value={formState.message}
+              value={form.message}
               onChange={handleChange}
-              onBlur={handleChange}
-              placeholder="Your message"
+              placeholder="How can I help?"
+              required
             />
           </div>
-          {errorMessage && (
-            <div className="my-1 p-1 bg-warning text-secondary rounded">
-              {errorMessage}
+
+          {/* Honeypot: hidden from people, filled in by spam bots. */}
+          <input
+            type="text"
+            name="website"
+            value={form.website}
+            onChange={handleChange}
+            className="honeypot"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+          />
+
+          {error && (
+            <div className="my-2 p-2 bg-warning text-dark rounded" role="alert">
+              {error}
             </div>
           )}
-          <div>
-          <button type="submit" className="btn btn-success mt-4 w-100">
-            Submit
+
+          {status === "sent" && (
+            <div className="my-2 p-2 bg-success text-white rounded" role="status">
+              Thank you! Your message was sent. I'll get back to you soon.
+            </div>
+          )}
+
+          {status === "failed" && (
+            <div className="my-2 p-2 bg-danger text-white rounded" role="alert">
+              Sorry, the message couldn't be sent. Please email me directly at{" "}
+              <a className="text-white" href={`mailto:${CONTACT_EMAIL}`}>
+                {CONTACT_EMAIL}
+              </a>
+              .
+            </div>
+          )}
+
+          <button type="submit" className="btn btn-success mt-3 w-100" disabled={sending}>
+            {sending ? "Sending…" : "Send Message"}
           </button>
-          </div>
-          <div id="email-link">
-            Email me at:{" "}
-            <a href="mailto: mnoorzai21@gmail.com">mnoorzai21@gmail.com</a>
+
+          <div id="email-link" className="mt-3">
+            Or email me at{" "}
+            <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
           </div>
         </form>
       </div>

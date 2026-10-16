@@ -1,109 +1,97 @@
 import React from "react";
 import "../../index.css";
 
+import stockScannerImage from "../../images/stock-scanner.jpg";
+import bookSearchImage from "../../images/book-search.jpg";
+import weatherDashboardImage from "../../images/weather-dashboard.jpg";
 import passwordGeneratorImage from "../../images/password-generator.png";
-import golfapedia from "../../images/project-1.png";
-import gitFit from "../../images/project-2.jpeg";
-import weatherDashboard from "../../images/weather-dashboard.png";
-import bookSearchjet from "../../images/bookSearch-screenshot.png";
-import monitorList from "../../images/monitorList-screenshot.png";
 
-// Fixed the typo in the array name
 const myProjects = [
   {
     id: 1,
-    title: "Git-Fit",
-    image: gitFit,
+    title: "Stock Scanner",
+    image: stockScannerImage,
     details:
-      "Full-stack web application using the MVC paradigm, with server-side API, and database connection. Used JavaScript, MySQL, Node.js, Express.js, Sequelize, Wger REST APIs, and Heroku. My role was a back end web developer.",
-    deployedLink: "https://peaceful-dusk-53929.herokuapp.com/",
-    github: "https://github.com/ShawnArgent/Git-Fit",
-    alt: "Git-Fit project screenshot", // Added alt text
+      "Real-time momentum scanner that checks about 10,000 U.S. stocks every minute against five trading filters (price, % gain, relative volume, share float and fresh news), with sound and desktop alerts.",
+    tech: "React · Vite · Node.js · Express · Alpaca & Massive APIs · GitHub Actions",
+    deployedLink: "https://mnoorzai21.github.io/stock-scanner/",
+    github: "https://github.com/mnoorzai21/stock-scanner",
+    alt: "Stock Scanner dashboard showing stocks that matched all five filters",
   },
   {
     id: 2,
-    title: "Golfapedia",
-    image: golfapedia,
+    title: "Book Search",
+    image: bookSearchImage,
     details:
-      "Golfapedia is an application that renders local golf courses and weather. Used HTML, CSS, JavaScript, and Google APIs, and Open Weather APIs. My role was a back end web developer",
-    deployedLink: "https://nirav-v.github.io/golfapedia/",
-    github: "https://github.com/nirav-v/golfapedia",
-    alt: "Golfapedia project screenshot", // Added alt text
+      "Full-stack reading-list app: search the Google Books catalog, create an account, and save or remove books. Searches run through a cached GraphQL API on the server.",
+    tech: "React · Apollo GraphQL · Express · MongoDB Atlas · JWT · Render",
+    deployedLink: "https://book-searchjet.onrender.com",
+    github: "https://github.com/mnoorzai21/book-searchjet-mnn",
+    alt: "Book Search results page showing books matching a search for Dune",
   },
   {
     id: 3,
-    title: "book-searchjet",
-    image: bookSearchjet,
+    title: "Weather Dashboard",
+    image: weatherDashboardImage,
     details:
-      "This is a book search full-stack app which allows the user to search for a book. The user signs up first, then can save a searched book in the list. Then they are able to save and remove the book to/from the saved list. Used JavaScript, React, GraphQL, Mongoose, Node.js, Express.js, Google Books APIs, and Heroku. I was Full Stack developer of this app.",
-    deployedLink: "https://book-searchjet-mnn.herokuapp.com/",
-    github: "https://github.com/mnoorzai21/book-searchjet-mnn",
-    alt: "Book Searchjet project screenshot", // Added alt text
+      "Search any city to see current conditions and a five-day forecast, with saved search history for quick lookups.",
+    tech: "JavaScript · Express · OpenWeatherMap API · Bootstrap",
+    deployedLink: "https://weather-dashboard-mnn.onrender.com",
+    github: "https://github.com/mnoorzai21/weather-dashboard-mnn",
+    alt: "Weather Dashboard showing current weather and a five-day forecast",
   },
   {
     id: 4,
-    title: "monitor-list",
-    image: monitorList,
-    details:
-      "With this app, the user can sign-up, login, search for favorite movies, and TV shows. The user can save their favorite movies and also see their saved items in the watchlist and can remove and mark items as watched from the watchlist. Used JavaScript, React, GraphQL, Mongoose, Node.js, Express.js, Google Books APIs, and Heroku. My role was back-end developer.",
-    deployedLink: "https://monitor-list.herokuapp.com/",
-    github: "https://github.com/mnoorzai21/monitor-list",
-    alt: "Monitor List project screenshot", // Added alt text
-  },
-  {
-    id: 5,
-    title: "weather-dashboard",
-    image: weatherDashboard,
-    details:
-      "This project is a weather app that the user can search for a city that they want to travel to. This shows the current weather of the searched city and the next five days' weather forecast. Used HTML, CSS, JavaScript, and Open Weather APIs. This is my own project.",
-    deployedLink: "https://mnoorzai21.github.io/weather-dashboard-mnn/",
-    github: "https://github.com/mnoorzai21/weather-dashboard-mnn",
-    alt: "Weather Dashboard project screenshot", // Added alt text
-  },
-  {
-    id: 6,
-    title: "password-generator",
+    title: "Password Generator",
     image: passwordGeneratorImage,
     details:
-      "HTML, CSS, and JavaScript have been used in this project, which makes it possible to generate combinations of random passwords. The user chooses the categories like numbers, special characters, and upper & lower case alphabets, then it generates a random password. I was in charge of the whole project.",
+      "Generates strong random passwords based on the length and character types the user chooses: lowercase, uppercase, numbers and symbols.",
+    tech: "JavaScript · HTML · CSS",
     deployedLink: "https://mnoorzai21.github.io/password-generator-mnn/",
     github: "https://github.com/mnoorzai21/password-generator-mnn",
-    alt: "Password Generator project screenshot", // Added alt text
+    alt: "Password Generator with options for password length and character types",
   },
 ];
 
 export default function Portfolio() {
   return (
-    <div className="container-fluid d-flex text-light flex-row flex-wrap justify-content-center">
-      {myProjects.map((project) => {
-        return (
-          <div
-            key={project.id}
-            className="card bg-dark text-white custom-card text-center m-3">
-            <img
-              src={project.image}
-              className="card-img custom-img"
-              alt={project.alt}
-            />
-            <div className="card-img-overlay p-4 custom-card-info">
-              <h5 className="card-title">{project.title}</h5>
-              <p className="card-text">{project.details}</p>
-              <a
-                className="btn btn-success btn-floating m-1"
-                href={project.deployedLink}
-                role="button">
-                Deployed Link
-              </a>
-              <a
-                className="btn btn-dark btn-floating m-1"
-                href={project.github}
-                role="button">
-                GitHub
-              </a>
-            </div>
+    <div className="container-fluid d-flex text-light flex-row flex-wrap justify-content-center page-content">
+      {myProjects.map((project) => (
+        <article
+          key={project.id}
+          className="card bg-dark text-white custom-card text-center m-3"
+        >
+          <img
+            src={project.image}
+            className="card-img custom-img"
+            alt={project.alt}
+            loading="lazy"
+          />
+          <div className="card-img-overlay p-4 custom-card-info">
+            <h3 className="card-title h5">{project.title}</h3>
+            <p className="card-text">{project.details}</p>
+            <p className="card-tech">{project.tech}</p>
+            <a
+              className="btn btn-success btn-floating m-1"
+              href={project.deployedLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${project.title} live demo (opens in a new tab)`}
+            >
+              Live Demo
+            </a>
+            <a
+              className="btn btn-light btn-floating m-1"
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${project.title} source code on GitHub (opens in a new tab)`}
+            >
+              Code
+            </a>
           </div>
-        );
-      })}
+        </article>
+      ))}
     </div>
   );
 }

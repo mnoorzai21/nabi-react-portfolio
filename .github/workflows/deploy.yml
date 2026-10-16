@@ -1,0 +1,49 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: |
+          set -o pipefail
+          if ! npm ci 2>&1 | tee npm-ci.log; then
+            grep -E "npm (error|ERR)" npm-ci.log | head -15 | while IFS= read -r line; do echo "::error::$line"; done
+            exit 1
+          fi
+      - name: Build
+        run: npm run build
+      # Pull requests: publish the build to a "preview" branch so it can be
+      # checked before merging. GitHub Pages still serves only gh-pages.
+      - name: Publish preview build
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: preview
+      # Publish the build to the gh-pages branch, which GitHub Pages serves.
+      - name: Deploy to GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build

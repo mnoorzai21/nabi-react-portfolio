@@ -5,8 +5,9 @@ export default function Navigation(props) {
   return (
     <Navbar collapseOnSelect expand="sm" className="row p-3 text-light">
       <Container>
-        <h2>Mohammad Nabi Noorzai</h2>
-        <Navbar.Brand href="#home"></Navbar.Brand>
+        <Navbar.Brand href="#aboutme" className="text-light site-name">
+          Mohammad Nabi Noorzai
+        </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           id="custom-nav-button"
@@ -16,28 +17,32 @@ export default function Navigation(props) {
           <Nav>
             <Nav.Link
               href="#aboutme"
-              className="text-light custom-nav"
+              className={`text-light custom-nav${props.currentPage === "AboutMe" ? " active-nav" : ""}`}
+              aria-current={props.currentPage === "AboutMe" ? "page" : undefined}
               onClick={() => props.handlePageChange("AboutMe")}
             >
               About Me
             </Nav.Link>
             <Nav.Link
               href="#projects"
-              className="text-light custom-nav"
+              className={`text-light custom-nav${props.currentPage === "Projects" ? " active-nav" : ""}`}
+              aria-current={props.currentPage === "Projects" ? "page" : undefined}
               onClick={() => props.handlePageChange("Projects")}
             >
               Projects
             </Nav.Link>
             <Nav.Link
               href="#contact"
-              className="text-light custom-nav"
+              className={`text-light custom-nav${props.currentPage === "Contact" ? " active-nav" : ""}`}
+              aria-current={props.currentPage === "Contact" ? "page" : undefined}
               onClick={() => props.handlePageChange("Contact")}
             >
               Contact
             </Nav.Link>
             <Nav.Link
               href="#resume"
-              className="text-light custom-nav"
+              className={`text-light custom-nav${props.currentPage === "Resume" ? " active-nav" : ""}`}
+              aria-current={props.currentPage === "Resume" ? "page" : undefined}
               onClick={() => props.handlePageChange("Resume")}
             >
               Resume

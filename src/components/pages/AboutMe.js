@@ -4,59 +4,53 @@ import myPhoto from "../../images/myphoto.jpg";
 
 export default function AboutMe() {
   return (
-    <div className="container container-fluid text-light flex-row flex-wrap justify-content-center">
+    <div className="container container-fluid text-light flex-row flex-wrap justify-content-center page-content">
       <div className="text-center col-3">
         <h1>About Me</h1>
         <div className="myphotoContainer">
           <img
             src={myPhoto}
             className="my-photo justify-content-center"
-            alt="MyPhoto"
+            alt="Mohammad Nabi Noorzai"
           />
         </div>
       </div>
 
       <div className="load about-me p-4">
-        <p>
-          As a dedicated Computer Science graduate from San Diego State
-          University (SDSU), class of May 2025, I bring a wealth of knowledge
-          and practical experience to the field. My educational background also
-          includes an Associate's degree in Computer Science from San Diego Mesa
-          College and a certificate in Web Development from the University of
-          California, San Diego.
+        <p className="about-lead">
+          Software engineer in San Diego who builds full-stack web applications
+          with React, Node.js and GraphQL.
         </p>
 
         <p>
-          I have developed a strong foundation across various areas of computer
-          science, including software development, software engineering, machine
-          learning, artificial intelligence, computer security, and data
-          science. My expertise extends to applying advanced algorithms and data
-          structures to solve complex challenges.
+          I graduated from San Diego State University with a B.S. in Computer
+          Science in May 2025. Before that I earned an Associate's degree in
+          Computer Science from San Diego Mesa College and a certificate in Web
+          Development from UC San Diego.
         </p>
 
         <p>
-          Known for my exceptional problem-solving skills and quick learning
-          abilities, I thrive in high-pressure environments and am adept at
-          swiftly mastering new concepts and technologies. My commitment to
-          excellence is matched by my work ethic; I approach every project with
-          dedication, ensuring thorough and high-quality outcomes.
+          I enjoy turning ideas into real applications that people use. My
+          favorite project is a real-time stock scanner I built for my own day
+          trading: it checks about 10,000 U.S. stocks every minute and alerts me
+          when one matches my strategy. I also built Book Search, a full-stack
+          GraphQL app, and keep my projects tested and automatically deployed.
         </p>
 
         <p>
-          I excel in collaborative settings, valuing teamwork and the collective
-          input of diverse perspectives to drive innovative solutions. My
-          ability to work effectively within teams and engage in constructive
-          collaboration enhances my projects and fosters a productive working
-          environment.
+          I learn new technologies quickly, I care about writing clean, reliable
+          code, and I work well on teams. I'm currently looking for software
+          engineering, frontend or full-stack roles, remote or in San Diego.
         </p>
 
-        <p>
-          Driven by a passion for transforming conceptual ideas into impactful
-          real-world applications, I am committed to continuous growth and
-          professional development. I am eager to contribute my skills and
-          enthusiasm to advance the field of computer science and make a
-          significant impact through my work.
-        </p>
+        <div className="about-actions">
+          <a className="btn btn-success m-1" href="#projects">
+            View My Projects
+          </a>
+          <a className="btn btn-light m-1" href="#contact">
+            Contact Me
+          </a>
+        </div>
       </div>
     </div>
   );
