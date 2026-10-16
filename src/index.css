@@ -73,8 +73,11 @@ code {
 
 /* Touch screens and small screens: show the details under each screenshot. */
 @media (hover: none), (pointer: coarse), (max-width: 768px) {
-  .custom-card-info {
+  /* Extra specificity: index.css loads before Bootstrap's .card-img-overlay. */
+  .card.custom-card .custom-card-info {
     position: static;
+    inset: auto;
+    overflow: visible;
     opacity: 1;
     background-color: rgb(83, 103, 140);
     border-radius: 0 0 0.375rem 0.375rem;
