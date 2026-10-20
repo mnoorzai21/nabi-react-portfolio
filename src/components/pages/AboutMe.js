@@ -24,7 +24,7 @@ export default function AboutMe() {
 
         <p>
           I graduated from San Diego State University with a B.S. in Computer
-          Science in May 2025. Before that I earned an Associate's degree in
+          Science in December 2024. Before that I earned an Associate's degree in
           Computer Science from San Diego Mesa College and a certificate in Web
           Development from UC San Diego.
         </p>
