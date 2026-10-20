@@ -5,14 +5,23 @@ body, html, #root {
   min-height: 100vh;
 }
 
-.app {
-  min-height: 100vh;
+/* Fixed background layer.
+   A separate fixed element is used instead of `background-attachment: fixed`
+   because mobile browsers (especially iOS Safari) ignore that property, which
+   made the image scroll with the page on phones and narrow windows. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
   width: 100%;
+  height: 100vh;
+  height: 100lvh; /* largest viewport height, so it still fills the screen when the mobile URL bar hides */
   background-image: url("../src/images/background.png");
-  background-size: cover;      /* Makes image cover entire area */
-  background-position: center; /* Centers image */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Optional: keeps image fixed */
+  z-index: -1;
+  pointer-events: none;
 }
 
 body {
@@ -26,10 +35,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: aliceblue;
   background-color: blanchedalmond;
-  background-image: url("../src/images/background.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 100%;
   justify-content: center;
   align-items: center;
